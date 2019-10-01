@@ -8,6 +8,10 @@ import followersData from './staticFollowers';
 
 const userAPI = 'https://api.github.com/users/eliooses';
 const followersAPI = 'https://api.github.com/users/eliooses/followers';
+const options = {
+  headers: { Authorization: 'fd1d7881204da2a1712d521b38c2fa6b5ff4510d' }
+};
+
 
 export default class Market extends React.Component {
  constructor(props) {
@@ -33,21 +37,27 @@ export default class Market extends React.Component {
 //      });
 //  }
 
- find = (event) => {
+ componentDidUpdate(){
   const searchUserAPI = `https://api.github.com/users/${this.state.formValue}`;
   const searchFollowersAPI = `https://api.github.com/users/${this.state.formValue}/followers`;
 
-   const getUser = axios.get(searchUserAPI);
-   const followersPromise = axios.get(searchFollowersAPI);
+   const getUser = axios.get(searchUserAPI, options);
+   const followersPromise = axios.get(searchFollowersAPI, options);
    
    Promise.all([getUser, followersPromise])
-     .then(([userRes, followersRes]) => {
-       this.setState({
-         user: userRes.data,
-         followers: followersRes.data,
-         formValue: '',
-       });
-     });
+    .then(([userRes, followersRes]) => {
+      this.setState({
+        user: userRes.data,
+        followers: followersRes.data,
+        //formValue: '',
+      });
+    });
+ }
+
+ find = (event) => {
+  this.setState({
+    formValue: event.target.value,
+    });
  }
 
  update = (event) => {

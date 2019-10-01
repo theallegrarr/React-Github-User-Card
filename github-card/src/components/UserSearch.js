@@ -6,8 +6,7 @@ export default function UserSearch (props) {
 
   return(
     <div className='searchBar'>
-      <input name='search' type='text' onChange={props.update} value={props.value}></input>
-      <button onClick={props.find}>Find</button>
+      <input name='search' type='text' onChange={props.update} value={props.value} onSubmit={props.find}></input>
     </div>
   );
 }
