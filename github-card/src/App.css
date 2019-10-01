@@ -1,0 +1,79 @@
+:root {
+  background-color: gray;
+}
+
+.App {
+  text-align: center;
+  background-color: gray;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.user-card {
+  background-color: gray;
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin-left: 30%;
+  margin-top: 5%;
+}
+
+.avatar {
+  width: 20%;
+  background-color: white;
+  padding: 1%;
+  box-shadow: 0.5px 2px 7px #282c34;
+}
+
+.details {
+  text-align: left;
+  margin-left: 1%;
+  background-color: #09d3ac;
+  padding: 1%;
+  box-shadow: 0.5px 2px 7px #282c34;
+}
+
+h4 {
+  font-style: italic;
+  color: black;
+}
+
+.follower-card {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  width: 45%;
+}
+
+.follower-avatar {
+  width: 20%;
+  height: 100px;
+  background-color: white;
+  padding: 1%;
+  box-shadow: 0.5px 2px 7px #282c34;
+  margin-bottom: 0;
+}
+
+.follower-details {
+  text-align: left;
+  margin-left: 1%;
+  height: 100px;
+  background-color: #09d3ac;
+  padding: 1%;
+  box-shadow: 0.5px 2px 7px #282c34;
+}
+
+.f-cards {
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  padding: 6%;
+  margin-left: 0;
+  margin: 0;
+  background-color: white;
+  margin-top: 1%;
+  box-shadow: 0.5px 2px 7px #282c34;
+}
