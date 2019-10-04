@@ -55,6 +55,7 @@ h4 {
   flex-direction: row;
   align-self: center;
   width: 45%;
+  margin: 1%;
 }
 
 .follower-avatar {
@@ -64,6 +65,7 @@ h4 {
   padding: 1%;
   box-shadow: 0.5px 2px 7px #282c34;
   margin-bottom: 0;
+  
   height: 130px;
 }
 
